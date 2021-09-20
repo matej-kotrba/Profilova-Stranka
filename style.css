@@ -1,12 +1,14 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 body {
     background-image: linear-gradient(to right,#212121,#3a3a3a);
     margin-left: auto !important;
     margin-right: auto !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
 header {
@@ -34,6 +36,15 @@ main {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+
+    .navbar {
+        width: 100% !important;
+    }
+    
+}
+
+
 @media only screen and (max-width: 700px) {
 
     header {
@@ -50,6 +61,17 @@ main {
     }
 }
 
+@media only screen and (max-width: 570px) {
+
+    .navbar {
+        width: 100% !important;
+    }
+    #hlavninadpis {
+        margin-top: 200px !important;
+    }
+    
+}
+
 @media only screen and (max-width: 400px) {
 
     
@@ -57,6 +79,9 @@ main {
     main {
         width: 98%;
         
+    }
+    #hlavninadpis {
+        margin-top: 250px !important;
     }
     .fixed-top {
         width: 100% !important;
@@ -94,16 +119,16 @@ h2 {
     transition: 0.5s;
     text-align: center;
     filter: grayscale();
-    
+    margin-bottom: 8%;
 }
 
 .image:hover {
     opacity: 1 !important;
     border-radius: 20px;
-    transition: 0.5s;
+    transition: 0.3s;
     transition-timing-function: cubic-bezier(0.4, 0.5, 0.6, 0.4);
     border: solid #3DB2FF 3px !important;
-    scale: 1.2;
+    scale: 1.15;
     filter: none !important;
 }
 
@@ -132,7 +157,7 @@ h2 {
 .flex-boximage:hover .item {
     color: #3DB2FF !important;
     transition: 1s;
-    margin-top: 50px !important;
+    /*margin-top: 50px !important;*/
 }
 
 .tlacitko:hover .item {
@@ -276,5 +301,13 @@ nav {
     border-radius: 20px;
     padding: 5%;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#mimoskolprojekty {
+    background-color: rgba(245, 245, 245, 0.034);
+    border-radius: 20px;
+    padding: 5%;
+
     margin-bottom: 10px;
 }
