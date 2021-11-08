@@ -11,7 +11,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
-header {
+nav {
     width: 50%;
     margin: auto !important;
     border: white solid 2px;
@@ -56,9 +56,7 @@ main {
     .fixed-top {
         width: 100% !important;
     }
-    #hlavninadpis {
-        margin-top: 150px !important;
-    }
+
 }
 
 @media only screen and (max-width: 570px) {
@@ -66,9 +64,7 @@ main {
     .navbar {
         width: 100% !important;
     }
-    #hlavninadpis {
-        margin-top: 200px !important;
-    }
+
     
 }
 
@@ -79,9 +75,6 @@ main {
     main {
         width: 98%;
         
-    }
-    #hlavninadpis {
-        margin-top: 250px !important;
     }
     .fixed-top {
         width: 100% !important;
@@ -104,11 +97,24 @@ h2 {
 }
 
 #hlavninadpis {
-    margin-top: 100px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(200%);
+    border-radius: 10px;
+    border: #3a3a3a 3px solid;
+    background-color: rgb(15, 84, 187);
     font-size: 50px;
     color: white;
-    -webkit-text-stroke: grey 1px;
+    transition: 0.3s ease-in-out;
 }
+
+#hlavninadpis:hover {
+    background-color: white;
+    color: rgb(15, 84, 187);
+    transition: 0.3s ease-in-out;
+}
+
 
 .image {
     width: 80%;
@@ -310,4 +316,18 @@ nav {
     padding: 5%;
 
     margin-bottom: 10px;
+}
+
+.disapear {
+    animation: zmizeni 0.5s ease-in-out;
+}
+
+
+@keyframes zmizeni {
+    from {background-color: rgb(15, 84, 187);
+        color: white;
+    }
+    to {background-color: transparent;
+        color: transparent;
+    }
 }

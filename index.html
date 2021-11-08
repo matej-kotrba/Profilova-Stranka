@@ -19,10 +19,10 @@
 
 <body>
   <header>
-    <div class="nadpis col-12">
+    <div class="col-12">
 
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
           <h1 class="text-center" id="hlavninadpis">Profilová stránka</h1>
         </div>
       </div>
@@ -175,16 +175,20 @@
       var a = scrollY
       const b = document.getElementsByClassName('nadpis')
       const c = document.getElementsByTagName('header')
-      if (a > 20) {
-        b[0].style.visibility = 'hidden';
-        c[0].style.background = 'transparent';
-        c[0].style.border = 'transparent';
-
+      const hlavninadpis = document.getElementById('hlavninadpis')
+      if (a > 0) {
+        
+        
+        //c[0].classList.add('disapear')
+        hlavninadpis.classList.add('disapear')
+        hlavninadpis.style.transition = "0.5s"
+        hlavninadpis.style.visibility = "hidden"
       }
       else {
-        b[0].style.visibility = 'visible';
-        c[0].style.background = 'linear-gradient(to right, black, #007bff)';
-        c[0].style.border = 'whitesmoke 2px solid';
+
+        hlavninadpis.classList.remove('disapear')
+        hlavninadpis.style.transition = "0.5s"
+        hlavninadpis.style.visibility = "visible"
       }
       window.requestAnimationFrame(main)
     }
